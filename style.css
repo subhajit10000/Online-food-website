@@ -1,0 +1,125 @@
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #6b8e23;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .btn {
+      background: #d6e86c;
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+    }
+
+    .hero-left {
+      background: #e8e4d3;
+      padding: 40px;
+      border-radius: 30px;
+    }
+
+    .hero-left h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #4d6b1f;
+    }
+
+    .hero-left p {
+      margin-bottom: 25px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .outline-btn {
+      border: 2px solid #6b8e23;
+      background: transparent;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 25px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .plus {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media(max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
