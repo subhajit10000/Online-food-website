@@ -1,129 +1,686 @@
-    * {
-       box-sizing: border-box; 
-       margin: 0;
-       padding: 0;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #6b8e23;
-      color: #333;
-    }
+body{
+background:#f7fff3;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
+header{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(107,142,35,.92);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      color: white;
-    }
+.logo{
+font-size:28px;
+font-weight:700;
+color:white;
+}
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-    }
+.logo i{
+margin-right:8px;
+}
 
-    .btn {
-      background: #d6e86c;
-      padding: 10px 20px;
-      border-radius: 25px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-    }
+nav{
+display:flex;
+gap:30px;
+}
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 20px;
-    }
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+position:relative;
+}
 
-    .hero-left {
-      background: #e8e4d3;
-      padding: 40px;
-      border-radius: 30px;
-    }
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:#fff;
+transition:.4s;
+}
 
-    .hero-left h1 {
-      font-size: 48px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-      color: #4d6b1f;
-    }
+nav a:hover::after{
+width:100%;
+}
 
-    .hero-left p {
-      margin-bottom: 25px;
-      font-size: 14px;
-      color: #666;
-    }
+.icons{
+display:flex;
+align-items:center;
+gap:20px;
+color:white;
+}
 
-    .actions {
-      display: flex;
-      gap: 15px;
-    }
+.btn{
+background:white;
+padding:12px 24px;
+border-radius:30px;
+text-decoration:none;
+color:#6b8e23;
+font-weight:600;
+transition:.3s;
+}
 
-    .outline-btn {
-      border: 2px solid #6b8e23;
-      background: transparent;
-      padding: 10px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-    }
+.btn:hover{
+transform:translateY(-4px);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 8%;
+gap:60px;
+}
 
-    .card {
-      position: relative;
-      border-radius: 25px;
-      overflow: hidden;
-      background: white;
-    }
+.hero img{
+width:100%;
+border-radius:30px;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+.left h1{
+font-size:60px;
+color:#486218;
+}
 
-    .card-title {
-      position: absolute;
-      bottom: 15px;
-      left: 15px;
-      color: white;
-      font-weight: 600;
-      font-size: 18px;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    }
+.left p{
+margin:25px 0;
+line-height:1.8;
+color:#666;
+}
 
-    .plus {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: white;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.hero-btn{
+display:flex;
+gap:20px;
+}
 
-    @media(max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-    }
+.btn2{
+text-decoration:none;
+padding:12px 24px;
+border-radius:30px;
+border:2px solid #6b8e23;
+color:#6b8e23;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding:70px 8%;
+}
+
+.box{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+border:1px solid #999696;
+transition:.4s;
+}
+
+.box:hover{
+transform:translateY(-10px);
+background:#d8dad5;
+}
+
+.box i{
+font-size:45px;
+color:#6b8e23;
+margin-bottom:20px;
+}
+
+.foods{
+padding:70px 8%;
+}
+
+.foods h2{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+color:#486218;
+}
+
+.food-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.food-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #999696;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.food-card:hover{
+transform:translateY(-12px);
+}
+
+.food-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.food-card h3{
+padding:15px;
+}
+
+.food-card p{
+padding:0 15px;
+font-size:24px;
+font-weight:700;
+color:#6b8e23;
+}
+
+.food-card a{
+display:block;
+margin:20px;
+text-align:center;
+background:#6b8e23;
+color:white;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+}
+
+.food-card a:hover{
+background:#486218;
+color:white;
+}
+
+.stats{
+background:#6b8e23;
+padding:70px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+text-align:center;
+color:white;
+}
+
+.stats h2{
+font-size:40px;
+}
+
+.review{
+padding:70px 8%;
+
+}
+
+.review h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
+color:#486218;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:white;
+padding:30px;
+border:1px solid #999696;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.review-card:hover{
+background:#d8dad5;
+}
+
+footer{
+background:#486218;
+padding:35px;
+text-align:center;
+color:white;
+margin-top:50px;
+}
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero{
+flex-direction:column;
+}
+
+.left h1{
+font-size:45px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+.order-page{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:#eef7e7;
+}
+
+.form{
+width:420px;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+}
+
+.form h2{
+text-align:center;
+margin-bottom:20px;
+color:#486218;
+}
+
+.form input,
+.form select,
+.form textarea{
+
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
+
+}
+
+.form button{
+width:100%;
+padding:15px;
+background:#6b8e23;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+cursor:pointer;
+}
+
+.form button:hover{
+background:#486218;
+}
+
+
+
+
+
+/* ================================
+   LARGE DESKTOP (1600px+)
+================================ */
+
+@media (min-width:1600px){
+
+.hero{
+    max-width:1500px;
+    margin:auto;
+}
+
+.food-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.features{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.review-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+
+/* ================================
+      LAPTOP (1200px)
+================================ */
+
+@media (max-width:1200px){
+
+header{
+    padding:18px 5%;
+}
+
+.hero{
+    padding:60px 5%;
+    gap:40px;
+}
+
+.left h1{
+    font-size:52px;
+}
+
+.food-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+
+/* ================================
+      TABLET LANDSCAPE
+================================ */
+
+@media (max-width:992px){
+
+header{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+nav{
+    order:3;
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-btn{
+    justify-content:center;
+}
+
+.left{
+    width:100%;
+}
+
+.right{
+    width:100%;
+}
+
+.right img{
+    width:90%;
+}
+
+.food-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.features{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.review-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+/* ================================
+         iPad
+================================ */
+
+@media (max-width:768px){
+
+header{
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:24px;
+}
+
+nav{
+    gap:18px;
+}
+
+nav a{
+    font-size:15px;
+}
+
+.icons{
+    gap:12px;
+}
+
+.hero{
+    padding:50px 20px;
+}
+
+.left h1{
+    font-size:42px;
+}
+
+.left p{
+    font-size:15px;
+}
+
+.hero-btn{
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn,
+.btn2{
+    width:220px;
+    text-align:center;
+}
+
+.features,
+.foods,
+.review{
+    padding:60px 20px;
+}
+
+.food-grid{
+    grid-template-columns:1fr;
+}
+
+.features{
+    grid-template-columns:1fr;
+}
+
+.review-grid{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    grid-template-columns:1fr 1fr;
+}
+
+.food-card img{
+    height:240px;
+}
+
+}
+
+
+/* ================================
+        Mobile
+================================ */
+
+@media (max-width:576px){
+
+header{
+    padding:15px;
+}
+
+nav{
+    gap:12px;
+}
+
+nav a{
+    font-size:14px;
+}
+
+.icons i{
+    display:none;
+}
+
+.order-link{
+    display:none;
+}
+
+.hero{
+    padding:35px 15px;
+}
+
+.left h1{
+    font-size:34px;
+}
+
+.left p{
+    font-size:14px;
+}
+
+.right img{
+    width:100%;
+}
+
+.foods h2,
+.review h2{
+    font-size:32px;
+}
+
+.stats{
+    grid-template-columns:1fr;
+    padding:50px 20px;
+}
+
+.stats h2{
+    font-size:34px;
+}
+
+.food-card img{
+    height:220px;
+}
+
+.box{
+    padding:25px;
+}
+
+footer{
+    padding:25px;
+}
+
+}
+
+
+/* ================================
+      Small iPhones
+================================ */
+
+@media (max-width:390px){
+
+.logo{
+    font-size:20px;
+}
+
+.left h1{
+    font-size:28px;
+}
+
+.btn,
+.btn2{
+    width:180px;
+    padding:10px;
+}
+
+.food-card h3{
+    font-size:18px;
+}
+
+.food-card p{
+    font-size:20px;
+}
+
+.food-card a{
+    padding:10px;
+}
+
+.stats h2{
+    font-size:28px;
+}
+
+.review-card{
+    padding:20px;
+}
+
+}
+
+
+/* ================================
+      Very Small Phones
+================================ */
+
+@media (max-width:320px){
+
+header{
+    padding:10px;
+}
+
+nav{
+    gap:8px;
+}
+
+nav a{
+    font-size:12px;
+}
+
+.left h1{
+    font-size:24px;
+}
+
+.left p{
+    font-size:13px;
+}
+
+.btn,
+.btn2{
+    width:160px;
+    font-size:14px;
+}
+
+.food-card img{
+    height:180px;
+}
+
+.foods h2,
+.review h2{
+    font-size:26px;
+}
+
+.stats h2{
+    font-size:24px;
+}
+
+}
