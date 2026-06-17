@@ -1,64 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Healthy Food Landing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy Food</title>
 
-</head>
-<body>
-  <div class="container">
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-      <h2>Larana, Inc.</h2>
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <span>Foodie</span>
+      </div>
+
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Store</a>
-        <a href="#">About Us</a>
-        <a href="#">FAQ</a>
+        <a href="index.html">Home</a>
+        <a href="#foods">Menu</a>
+        <a href="#features">Services</a>
+        <a href="#review">Reviews</a>
+        <a href="order.html" class="order-link">Order</a>
       </nav>
-      <button class="btn">Order Now</button>
+
+      <div class="icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <a href="order.html" class="btn">Order Now</a>
+      </div>
     </header>
 
     <section class="hero">
-      <div class="hero-left">
-        <h1>Something Healthy<br/>Something tasty</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque pretium neque.</p>
-        <div class="actions">
-          <button class="btn">Order Now</button>
-          <button class="outline-btn">Learn More</button>
+      <div class="left">
+        <h1>
+          Fresh Food <br />
+          Delivered To Your Door
+        </h1>
+
+        <p>
+          Enjoy healthy, delicious meals prepared by professional chefs using
+          fresh ingredients.
+        </p>
+
+        <div class="hero-btn">
+          <a href="order.html" class="btn">Order Now</a>
+
+          <a href="#foods" class="btn2">Explore Menu</a>
         </div>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" />
-          <div class="plus">+</div>
-          <div class="card-title">NutriVital</div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" />
-          <div class="plus">+</div>
-          <div class="card-title">FitFuel</div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" />
-          <div class="plus">+</div>
-          <div class="card-title">WellnessBites</div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" />
-          <div class="plus">+</div>
-          <div class="card-title">CleanEats</div>
-        </div>
+      <div class="right">
+        <img
+          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900"
+        />
       </div>
-      
     </section>
-  </div>
-</body>
-  
+
+    <section class="features" id="features">
+      <div class="box">
+        <i class="fa-solid fa-leaf"></i>
+
+        <h3>Fresh Ingredients</h3>
+
+        <p>Prepared using organic vegetables and premium ingredients.</p>
+      </div>
+
+      <div class="box">
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <h3>Fast Delivery</h3>
+
+        <p>Hot and fresh food delivered within 30 minutes.</p>
+      </div>
+
+      <div class="box">
+        <i class="fa-solid fa-kitchen-set"></i>
+        <h3>Expert Chefs</h3>
+
+        <p>Experienced chefs preparing every meal with love.</p>
+      </div>
+    </section>
+
+    <section class="foods" id="foods">
+      <h2>Popular Foods</h2>
+
+      <div class="food-grid">
+        <div class="food-card">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+          />
+
+          <h3>Veg Burger</h3>
+
+          <p>₹149</p>
+
+          <a href="order.html">Order Now</a>
+        </div>
+
+        <div class="food-card">
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591"
+          />
+
+          <h3>Cheese Pizza</h3>
+
+          <p>₹299</p>
+
+          <a href="order.html">Order Now</a>
+        </div>
+
+        <div class="food-card">
+          <img
+            src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9"
+          />
+
+          <h3>Pasta</h3>
+
+          <p>₹249</p>
+
+          <a href="order.html">Order Now</a>
+        </div>
+
+        <div class="food-card">
+          <img
+            src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe"
+          />
+
+          <h3>Healthy Salad</h3>
+
+          <p>₹179</p>
+
+          <a href="order.html">Order Now</a>
+        </div>
+
+        <div class="food-card">
+          <img
+            src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+          />
+
+          <h3>Sandwich</h3>
+
+          <p>₹129</p>
+
+          <a href="order.html">Order Now</a>
+        </div>
+
+        <div class="food-card">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+          />
+
+          <h3>Fruit Bowl</h3>
+
+          <p>₹199</p>
+
+          <a href="order.html">Order Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div>
+        <h2>5000+</h2>
+
+        <p>Happy Customers</p>
+      </div>
+
+      <div>
+        <h2>150+</h2>
+
+        <p>Food Items</p>
+      </div>
+
+      <div>
+        <h2>30 Min</h2>
+
+        <p>Fast Delivery</p>
+      </div>
+
+      <div>
+        <h2>4.9 ★</h2>
+
+        <p>Ratings</p>
+      </div>
+    </section>
+
+    <section class="review" id="review">
+      <h2>Customer Reviews</h2>
+
+      <div class="review-grid">
+        <div class="review-card">
+          ⭐⭐⭐⭐⭐
+
+          <p>"Best food delivery experience."</p>
+
+          <h4>- Rahul</h4>
+        </div>
+
+        <div class="review-card">
+          ⭐⭐⭐⭐⭐
+
+          <p>"Healthy and tasty meals every time."</p>
+
+          <h4>- Priya</h4>
+        </div>
+
+        <div class="review-card">
+          ⭐⭐⭐⭐⭐
+
+          <p>"Excellent quality and quick service."</p>
+
+          <h4>- Aman</h4>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Foodie</h2>
+
+      <p>Fresh • Healthy • Delicious</p>
+    </footer>
+  </body>
 </html>
